@@ -903,6 +903,12 @@ footer
 
 .content
 	padding: 20px
+	p
+		color: #444
+		font-size: 15px
+		line-height: 20px
+	h3
+		font-size: 18px
 
 .admin
 	label
@@ -1415,6 +1421,210 @@ textarea
 							background-position: 179px 0
 
 
+.uni_top_img
+	width: 100%
+	height: 300px
+	overflow: hidden
+	position: relative
+	img
+		height: 100%
+		position: absolute
+	.uni_top_img_shadow
+		width: 100%
+		height: 100%
+		background: linear-gradient(to top, black 0%, transparent 70%)
+		position: absolute
+		top: 0
+
+.sec_top_inside
+	text-align: center
+	color: white
+	margin-top: -130px
+	font-size: 30px
+	letter-spacing: 3px
+	position: relative
+	margin-bottom: 10px
+
+.uni_galer_inside
+	width: 100%
+	text-align: center
+	ul
+		display: inline-block
+		li
+			float: left
+			list-style-type: none
+			overflow: hidden
+			display: inline-block
+			width: 160px
+			height: 120px
+			position: relative
+			border: 5px solid white
+			&:not(:first-child)
+				border-left: none
+			img
+				position: absolute
+				height: 100%
+				width: 100%
+				left: 0
+			&:hover
+				.uni_shadow_galer
+					display: block
+			.uni_shadow_galer
+				position: absolute
+				width: 100%
+				height: 100%
+				background: rgba(white, .7)
+				text-align: center
+				display: none
+				color: #303030
+				padding-top: 35px
+				cursor: pointer
+				i
+					display: inline-block
+					width: 18px
+					height: 14px
+					background: url(../img/icons.png)
+					background-position: 52px 0
+				span
+					display: block
+					font-size: 12px
+					font-weight: bold
+
+.blue_info
+	i
+		display: inline-block
+		width: 24px
+		height: 24px
+		background: url(../img/ICON1.png)
+		vertical-align: middle
+		margin-right: 10px
+		margin-top: -5px
+	p
+		text-transform: uppercase
+		color: #476ac6
+		font-size: 12px
+		display: inline-block
+		font-weight: bold
+
+.uni_inside
+	p
+		font-size: 15px
+		line-height: 20px
+		img
+			float: right
+			margin-left: 20px
+			margin-bottom: 20px
+
+.cytata
+	width: 100%
+	padding: 20px
+	background: #f5f6fa
+	margin-top: 20px
+	p
+		font-size: 15px
+		font-style: italic
+		margin: 0
+
+.foto_s_info_wrap
+	position: relative
+	overflow: hidden
+	height: 200px
+	width: 100%
+	img
+		position: absolute
+		width: 100%
+		left: 0
+	.shadow_foto_s_info
+		position: absolute
+		display: flex
+		width: 100%
+		height: 100%
+		background: rgba(black, .6)
+		top: 0
+		h3
+			display: block
+			margin: auto
+			font-size: 30px
+			letter-spacing: 5px
+			z-index: 1000
+			color: white
+
+.faculty_list
+	> ul
+		column-count: 2
+		> li
+			font-weight: bold
+			font-size: 15px
+			list-style-type: none
+			margin-top: 20px
+			position: relative
+			padding-left: 20px
+			&:before
+				content: ''
+				display: inline-block
+				width: 4px
+				height: 4px
+				position: absolute
+				background: #476ac6
+				left: 8px
+				top: 10px
+			ul
+				margin-left: 35px
+				padding: 0
+				margin-top: 10px
+				li
+					font-weight: normal
+					list-style-type: none
+					position: relative
+					&:after
+						content: ''
+						display: block
+						width: 4px
+						height: 4px
+						border: 1px solid #476ac6
+						position: absolute
+						left: -15px
+						top: 9px
+
+
+.content_bottom_button
+	width: 100%
+	padding: 20px
+	border-top: 1px solid #e5e5e5
+	font-size: 15px
+	.button_bottom_wrap
+		float: right
+		button
+			margin-left: 10px
+
+.what_in_program_inside
+	width: 100%
+	border-top: 1px solid #e5e5e5
+	ul
+		width: 100%
+		display: inline-block
+		text-align: center
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			list-style-type: none
+			width: 32%
+			padding-left: 25px
+			line-height: 30px
+			padding-top: 25px
+			padding-bottom: 25px
+			font-size: 36px
+			font-weight: bold
+			text-align: left
+			span
+				display: block
+				font-size: 24px
+				font-weight: normal
+
+.inside_prog_foto
+	img
+		top: -150px
 
 
 
