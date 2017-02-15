@@ -1,5 +1,15 @@
 $(function() {
 
+	$('.active_all_info_student_in_admin').parent().parent().hide();
+	$('.norm_strok').click(function() {
+		$(this).parent().parent().next().slideToggle();
+	})
+
+	$('.last_tab').click(function(){
+		if($(this).attr('id') == 'active_last_tab') $(this).attr('id', '');
+		else $(this).attr('id', 'active_last_tab');
+	})
+
 	$('.mnu_list').hover(function() {
 		if($(this).attr('id') == 'mnu_0') hover_mnu('#hover_mnu_0', '#mnu_0');
 		else if($(this).attr('id') == 'mnu_1') hover_mnu('#hover_mnu_1', '#mnu_1');
