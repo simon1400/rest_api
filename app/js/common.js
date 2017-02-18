@@ -1,5 +1,11 @@
 $(function() {
 
+	$('.dop_usluh_item > h3').click(function(){
+		$(this).next().slideToggle();
+		if($(this).children().hasClass('transforms_up')) $(this).children().removeClass('transforms_up');
+		else $(this).children().addClass('transforms_up');
+	})
+
 	$('.active_all_info_student_in_admin').parent().parent().hide();
 	$('.norm_strok').click(function() {
 		$(this).parent().parent().next().slideToggle();

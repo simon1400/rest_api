@@ -907,6 +907,9 @@ footer
 		color: #444
 		font-size: 15px
 		line-height: 20px
+		margin: 0
+		&:not(:first-child)
+			margin-top: 20px
 	h3
 		font-size: 18px
 
@@ -1625,6 +1628,528 @@ textarea
 .inside_prog_foto
 	img
 		top: -150px
+
+.tabs_content_inside
+	ul
+		display: inline-block
+		border-bottom: 1px solid #e5e5e5
+		margin-top: 10px
+		padding-left: 10px
+		li
+			float: left
+			list-style-type: none
+			font-size: 18px
+			color: #7f7f7f
+			padding: 10px 15px
+			cursor: pointer
+		.active_tabs
+			border-bottom: 2px solid #476ac6
+			color: #303030
+
+.list_true
+	ul
+		padding-left: 20px
+		li
+			list-style-type: none
+			font-size: 14px
+			position: relative
+			margin: 2px 0
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				width: 4px
+				height: 4px
+				background: #476ac6
+				left: -15px
+				top: 9px
+
+.list_false
+	ul
+		margin-top: 20px
+		li
+			&:after
+				background: #fa2a15
+
+.info_red
+	margin-top: 20px
+	i
+		display: inline-block
+		width: 24px
+		height: 24px
+		background: url(../img/ICON.png)
+		vertical-align: middle
+		margin-top: -5px
+		margin-right: 10px
+	p
+		margin: 0
+		font-size: 18px
+		font-weight: bold
+		display: inline-block
+
+.bottom_prog_inside
+	width: 100%
+	border-top: 1px solid #e5e5e5
+	padding: 20px
+	.price_inside
+		float: left
+		font-size: 24px
+		line-height: 26px
+		b
+			font-size: 30px
+		span
+			display: block
+			font-size: 15px
+			color: #7f7f7f
+	.yellow_button
+		width: 275px
+		height: 55px
+		font-size: 24px
+		float: right
+
+.content_center
+	flex: 2 640px
+
+.right_info
+	flex: 1 220px
+	margin-left: 30px
+	h3
+		font-size: 18px
+		line-height: 22px
+	p
+		font-size: 15px
+		line-height: 18px
+
+.transforms_up
+	transform: rotate(-180deg)
+	transition: all .5s ease
+
+.dop_usluh_item
+	&:not(:first-child)
+		margin-top: 20px
+	h3
+		display: block
+		width: 100%
+		background: #fff
+		padding: 20px 25px
+		margin: 0
+		font-size: 18px
+		line-height: 18px
+		border-bottom: 1px solid #e5e5e5
+		cursor: pointer
+		i
+			float: right
+			font-size: 25px
+			display: inline-block
+			margin-top: -3px
+			transition: all .5s ease
+	.content_dop_us
+		background: #fff
+		padding: 20px
+		display: none
+		h3
+			font-size: 18px
+			margin: 0
+			margin-top: 25px
+			padding: 0
+			border-bottom: 0
+		p
+			font-size: 15px
+			margin: 0
+			&:not(:first-child)
+				margin-top: 20px
+		.list_true
+			margin-top: 20px
+
+.button_top_city
+	button
+		width: 100px
+		height: 30px
+		background: #fff
+		font-size: 15px
+		border: 1px solid #ccc
+		&:not(:first-child)
+			border-left: 0
+	.active_but_city
+		background: #d3dbf1
+		border: 1px solid #6c88d1
+
+.content_program
+	display: flex
+	justify-content: space-between
+	flex-flow: row wrap
+	.program_item
+		width: 465px
+		height: 380px
+		margin-top: 20px
+		background: #fff
+	.what_in_program_inside
+		ul
+			li
+				font-size: 18px
+				line-height: 18px
+				padding-top: 20px
+				padding-bottom: 20px
+				span
+					font-size: 12px
+	h3
+		display: block
+		width: 100%
+		padding: 15px 20px
+		margin: 0
+		font-size: 16px
+		border-bottom: 1px solid #e5e5e5
+		span
+			font-weight: normal
+	p
+		display: block
+		padding: 20px
+		font-size: 15px
+		margin: 0
+		line-height: 18px
+	.bottom_prog_inside
+		.price_inside
+			font-size: 15px
+			line-height: 16px
+			padding-top: 10px
+			b
+				font-size: 15px
+			span
+				font-size: 12px
+		.yellow_button
+			width: 180px
+			height: 50px
+			border: 0
+			border-radius: 0
+			font-size: 15px
+			font-weight: bold
+
+.blue_button
+	border: 2px solid #476ac6!important
+	background: #fff
+	color: #476ac6
+	&:hover
+		background: #fff
+		border: 2px solid #476ac6!important
+
+.no_active
+	text-decoration: line-through
+	color: #ccc
+	position: relative
+	cursor: pointer
+	&:hover
+		i
+			display: block
+	i
+		font-style: normal
+		font-size: 14px
+		display: block
+		position: absolute
+		width: 210px
+		padding: 10px
+		left: -210px
+		top: 8px
+		line-height: 16px
+		border: 1px solid #ccc
+		background: #fff
+		color: #303030
+		font-weight: normal
+		display: none
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			background: #fff
+			width: 16px
+			height: 16px
+			border-top: 1px solid #ccc
+			border-right: 1px solid #ccc
+			transform: rotate(45deg)
+			right: -9px
+			top: 50%
+			margin-top: -8px
+
+.program_dop_inf
+	width: 465px
+	height: 380px
+	margin-top: 20px
+	padding-left: 20px
+	padding-right: 200px
+	h3
+		font-size: 18px
+		line-height: 20px
+		border-bottom: 0
+		padding: 0
+		margin-top: 10px
+	p
+		font-size: 15px
+		line-height: 18px
+		padding: 0
+		margin-top: 20px
+
+.sred_obrazovanie
+	width: 100%
+	background: #fff
+	p
+		font-size: 15px
+		line-height: 18px
+		margin: 0
+		&:not(:first-child)
+			margin-top: 20px
+		span
+			display: inline-block
+			float: right
+			width: 210px
+			border: 1px dashed #ccc
+			font-size: 14px
+			line-height: 17px
+			padding: 15px
+			margin-left: 20px
+			margin-bottom: 20px
+
+.sec_top_h2
+	width: 100%
+	display: block
+	border-bottom: 1px solid #e5e5e5
+	font-size: 24px
+	padding: 15px 25px
+	margin: 0
+
+.uni_catalog
+	display: flex
+	justify-content: space-between
+	flex-flow: row wrap
+	width: 100%
+	.top_button_line_wrap
+		width: 100%
+	.uni_catal_item
+		width: 465px
+		height: 410px
+		background: #fff
+		cursor: pointer
+		margin-top: 20px
+		h3
+			display: block
+			width: 100%
+			font-size: 16px
+			margin: 0
+			margin: 10px 20px
+		.foto_uni_item
+			position: relative
+			height: 200px
+			width: 100%
+			overflow: hidden
+			img
+				position: absolute
+				height: 100%
+				top: 0
+			.foto_uni_item_shadow
+				position: absolute
+				width: 100%
+				height: 100%
+				background: rgba(black, .5)
+				span
+					position: absolute
+					bottom: 20px
+					text-transform: uppercase
+					color: white
+					font-size: 11px
+					font-weight: bold
+					letter-spacing: 1px
+					&:first-child
+						left: 20px
+					&:last-child
+						right: 20px
+		p
+			font-size: 15px
+			padding: 20px
+			display: block
+			position: relative
+			margin: 0
+			line-height: 20px
+
+.checkbox_wrap
+	float: right
+	input
+		display: none
+		+ label
+			display: inline-block
+			width: 16px
+			height: 16px
+			border: 1px solid #ccc
+			position: relative
+			margin-right: 5px
+			vertical-align: middle
+			margin-top: -2px
+			cursor: pointer
+			&:after
+				content: ''
+				display: none
+				position: absolute
+				width: 16px
+				height: 8px
+				border-bottom: 1px solid #476ac6
+				border-left: 1px solid #476ac6
+				transform: rotate(-45deg)
+				left: 2px
+				top: -1px
+			+ label
+				font-size: 14px
+				&:not(:last-child)
+					margin-right: 20px
+	input:checked + label:after
+		display: block
+
+
+.contacts
+	display: flex
+	justify-content: space-between
+	flex-flow: row wrap
+	.map_contacts
+		flex: 2 630px
+		height: 280px
+		margin-right: 20px
+		background: #fff
+	.address_contacts
+		flex: 1 305px
+		height: 280px
+		background: #fff
+		padding: 20px
+		p
+			margin: 0
+			font-size: 15px
+			color: #303030
+			line-height: 20px
+			&:not(:first-child)
+				margin-top: 25px
+			span
+				display: block
+				font-weight: bold
+				color: #7f7f7f
+	.contact_item
+		flex: 1 305px
+		height: 280px
+		background: #fff
+		margin-top: 20px
+		margin-left: 20px
+		padding: 20px
+		text-align: center
+		&:nth-child(3n+3)
+			margin-left: 0px
+		.contacts_item_ing_wrap
+			width: 100px
+			height: 100px
+			border-radius: 50%
+			overflow: hidden
+			display: inline-block
+		h4
+			font-size: 18px
+			margin: 0
+			margin-top: 10px
+		p
+			font-size: 15px
+			color: #808080
+			margin: 0
+			line-height: 18px
+			margin-top: 5px
+			display: inline-block
+		span
+			font-size: 18px
+			font-weight: bold
+			line-height: 18px
+			color: #0054b9
+			margin-top: 10px
+			display: inline-block
+		a
+			font-size: 15px
+
+.o_nas_foto_wrap
+	img
+		top: -270px
+	.shadow_foto_s_info
+		h3
+			font-size: 36px
+
+.o_nas_blue_info
+	margin-top: 10px
+	margin-bottom: 20px
+	p
+		font-size: 18px
+		color: #303030
+
+.partners
+	display: flex
+	justify-content: space-between
+	flex-flow: row wrap
+	.partner_item
+		flex: 1 300px
+		background: #fff
+		height: 310px
+		&:nth-child(odd)
+			margin-right: 20px
+		.partner_logo_wrap
+			width: 100%
+			border-bottom: 1px solid #e5e5e5
+			text-align: center
+			height: 150px
+			display: flex
+			img
+				margin: auto
+		h3
+			font-size: 18px
+			margin: 0
+			a
+				font-size: 15px
+				font-weight: normal
+				display: inline-block
+				margin-left: 10px
+		p
+			font-size: 12px
+			color: #808080
+			margin: 0
+			margin-top: 10px
+
+.predstaviteli
+	.predstavitel_item
+		width: 100%
+		background: #fff
+		&:not(:first-child)
+			margin-top: 20px
+		h3
+			display: block
+			width: 100%
+			padding: 20px
+			border-bottom: 1px solid #e5e5e5
+			font-size: 16px
+			line-height: 16px
+			margin: 0
+			span
+				font-weight: normal
+			img
+				float: right
+		.preds_item_inside
+			width: 100%
+			&:not(:first-child)
+				margin-top: 20px
+			span
+				width: 15%
+				display: inline-block
+				vertical-align: top
+				font-size: 15px
+				color: #808080
+				line-height: 20px
+			p
+				display: inline-block
+				vertical-align: top
+				width: 85%
+				margin: 0
+				font-size: 15px
+				padding: 0
+				line-height: 19px
+
+
+
+
 
 
 
