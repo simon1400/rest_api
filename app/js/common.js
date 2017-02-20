@@ -1,5 +1,38 @@
 $(function() {
 
+ 	var len_kolej;
+
+ 	len_kolej = $('.content_kolej_catalog .kolej_item').length;
+ 	var len_img_kolej;
+ 	for(var a = 0; a < len_kolej; a++){
+ 		$('.content_kolej_catalog .kolej_item').eq(a).attr("id", 'kolej_item_' + a);
+ 		len_img_kolej = $('.content_kolej_catalog #kolej_item_' + a + ' img').length;
+ 		for(var b = 0; b < len_img_kolej; b++){
+ 			$('.content_kolej_catalog #kolej_item_' + a + ' .kolej_shadow_tabs .tabs').append('<div class="tabs_item"><span></span></div>');
+ 		}
+ 		$('.content_kolej_catalog #kolej_item_' + a + ' .kolej_shadow_tabs .tabs .tabs_item').eq(0).addClass('active_kolej_tabs');
+ 	}
+
+ 	$('.tabs_item').hover(function() {
+ 		$(this).addClass('active_kolej_tabs');
+ 		$(this).siblings().removeClass('active_kolej_tabs');
+ 		hover_tabs();
+ 	});
+
+ 	var index, len_tabs_2;
+ 	function hover_tabs(){
+ 		for(var a = 0; a < len_kolej; a++){
+ 			len_tabs_2 = $('#kolej_item_' + a + ' .kolej_slider_wrap .tabs .tabs_item').length;
+ 			for(var b = 0; b < len_tabs_2; b++){
+ 				index = $('#kolej_item_' + a + ' .kolej_slider_wrap .tabs .active_kolej_tabs').index();
+ 				$('#kolej_item_' + a + ' .kolej_slider_wrap img').eq(index + 1).css('z-index', '100');
+ 			}
+ 		}
+ 	}
+ 	hover_tabs();
+ 	
+ 	
+
 	$('.dop_usluh_item > h3').click(function(){
 		$(this).next().slideToggle();
 		if($(this).children().hasClass('transforms_up')) $(this).children().removeClass('transforms_up');
