@@ -1438,6 +1438,18 @@ textarea
 		background: linear-gradient(to top, black 0%, transparent 70%)
 		position: absolute
 		top: 0
+		span
+			position: absolute
+			text-transform: uppercase
+			color: white
+			font-weight: bold
+			font-size: 11px
+			letter-spacing: 1px
+			bottom: 15px
+			&:first-child
+				left: 15px
+			&:last-child
+				right: 15px
 
 .sec_top_inside
 	text-align: center
@@ -2683,15 +2695,202 @@ input
 		margin-left: 213px
 		
 
+.popup
+	position: fixed
+	width: 100%
+	height: 100%
+	background: rgba(white, .9)
+	top: 0
+	> img
+		position: absolute
+		top: 40px
+		right: 40px
+		cursor: pointer
+
+.anketa_popup
+	padding-top: 60px
+	display: none
+	h3
+		font-size: 18px
+		margin: 0
+		text-align: center
+		font-weight: normal
+		letter-spacing: 1px
+	.anketa_wrap
+		width: 100%
+		display: flex
+		justify-content: center
+		flex-flow: row wrap
+		.left_anketa
+			width: 260px
+			margin-top: 60px
+			margin-right: 8px
+			button
+				float: left
+				background-color: transparent
+				border: none
+				color: #999999
+				font-size: 15px
+				margin-top: 75px
+		.right_anketa
+			width: 260px
+			margin-top: 60px
+			margin-left: 8px
+			button
+				float: right
+				background-color: #fff
+				border: 1px solid #e5e5e5
+				color: #6c88d1
+				font-size: 14px
+				margin-top: 75px
+				font-weight: bold
+				width: 132px
+				height: 32px
+		.right_item_form
+			margin-left: 0
+		label
+			display: inline-block
+			font-size: 15px
+			&:not(:first-child)
+				margin-top: 20px
+		.stranno
+			margin-top: 13px!important
+		.radio_sex_wrap
+			label
+				margin-top: 0
+
+
+.zakaz_popup
+	display: flex
+	display: none
+	.zakaz_wrap
+		width: 260px
+		margin: auto
+		.right_item_form
+			margin-left: 0
+		label
+			font-size: 14px
+			color: #656565
+			margin-top: 20px
+			display: inline-block
+		button
+			font-size: 14px
+			font-weight: bold
+			color: #6c88d1
+			width: 100%
+			height: 32px
+			border: 1px solid #e5e5e5
+			background: #fff
+			margin-top: 20px
+			letter-spacing: 1px
+
+.napisat_popup
+	display: flex
+	display: none
+	.napisat_wrap
+		width: 535px
+		margin: auto
+	.napis_line_wrap
+		width: 260px
+		display: inline-block
+		float: right
+		&:first-child
+			float: left
+		label
+			font-size: 14px
+			color: #656565
+		input
+			width: 100%
+			height: 32px
+			padding: 15px
+			font-size: 15px
+	textarea
+		width: 100%
+		height: 180px
+		padding: 10px 15px
+	button
+		float: right
+		width: 120px
+		height: 32px
+		border: 1px solid #e5e5e5
+		background: #fff
+		font-weight: bold
+		font-size: 14px
+		color: #6c88d1
+
+.blog_catal_wrap
+	display: flex
+	justify-content: space-between
+	flex-flow: row wrap
+	.blog_item
+		width: 305px
+		height: 390px
+		background: #fff
+		margin-top: 20px
+		cursor: pointer
+		h3
+			padding: 15px 20px
+			font-size: 16px
+			line-height: 18px
+			margin: 0
+		.blog_img_wrap_item
+			height: 145px
+			width: 100%
+			position: relative
+			overflow: hidden
+			img
+				position: absolute
+				width: 100%
+				top: 0
+				left: 0
+			.shadow_blog
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				position: absolute
+				background: linear-gradient(to top, rgba(black, .8) 0%, transparent 50%)
+				span
+					color: white
+					position: absolute
+					bottom: 15px
+					font-size: 11px
+					font-weight: bold
+					text-transform: uppercase
+					letter-spacing: 1px
+					&:first-child
+						left: 15px
+					&:last-child
+						right: 15px
+		p
+			font-size: 15px
+			padding: 15px
+			margin: 0
+			line-height: 18px
+
+
+.blog_page
+	margin-top: 0
+	padding-top: 0
+	.sidebar
+		margin-top: 20px
+
+
+.little_p_info
+	i
+		margin-top: 20px
+	p
+		font-size: 15px
+		font-weight: normal
+		text-transform: none
+		width: 95%
+		vertical-align: middle
+		color: #303030
 
 
 
 
 
-
-
-
-			
 
 
 
