@@ -1,5 +1,21 @@
 $(function() {
 
+	$('.chose_program h3 img').click(function() {
+		$(this).parent().parent().parent().hide();
+	})
+
+	$('.name_wrap p').click(function() {
+		$('.name_mnu').toggleClass('name_mnu_hover');
+	})
+
+	$('.login').click(function() {
+		$(this).toggleClass('login_hover');
+	})
+
+	$('.popup > img').click(function() {
+		$(this).parent().hide();
+	})
+
 	$('.cancel').hide();
 
 	$('.button_control_famyli .add').click(function(){
@@ -11,7 +27,6 @@ $(function() {
 			$(this).css('float', 'right');
 		}
 	})
-
 
 
 	$('.button_control_famyli .cancel').click(function(){
