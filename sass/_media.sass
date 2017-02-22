@@ -3,14 +3,30 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width : 1032px)
+	header
+		.header_top
+			button
+				display: none
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
-
+@media only screen and (max-width : 804px)
+	header
+		.header_top
+			height: 50px
+			.logo
+				padding-top: 7px
+				img
+					margin-top: 0
+			.big_mnu
+				display: none
+			.hover_mnu
+				display: flex
+			.small_mnu_wrap
+				display: block
+				button
+					display: flex
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)

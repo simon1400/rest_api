@@ -1,5 +1,30 @@
 $(function() {
 
+	$('.small_mnu_wrap button').click(function() {
+		$('.small_mnu_hover').toggleClass('hover_mnu');
+	})
+
+	$('.button_right_wrap button').click(function() {
+		$(this).siblings().removeClass('active_right_button');
+		$(this).addClass('active_right_button');
+	})
+
+	selects('.standart_select', '.content_standart_select span', 'active_select_standart');
+	selects('.select_month', '.content_select_date span', 'active_select_month');
+
+	function selects(param1, param2, param3){
+		$(param1).click(function() {
+			$(this).children().eq(2).slideToggle();
+			$(this).children().css('z-index', '1000');
+		})
+
+		$(param2).click(function() {
+			$(this).siblings().removeClass(param3);
+			$(this).addClass(param3);
+			$(this).parent().parent().children().eq(0).html($(this).html());
+		})
+	}
+
 	$('.chose_program h3 img').click(function() {
 		$(this).parent().parent().parent().hide();
 	})
