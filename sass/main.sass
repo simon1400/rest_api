@@ -707,6 +707,7 @@ nav
 	flex-flow: row wrap
 	width: 100%
 	.sec_4_item
+		display: flex
 		width: 275px
 		height: 275px
 		overflow: hidden
@@ -717,9 +718,7 @@ nav
 			.sec_4_item_shadow
 				background: linear-gradient(to top, rgba(black, .4) 0%, transparent 80%)
 		img
-			position: absolute
-			top: 0
-			height: 100%
+			margin: auto
 		.sec_4_item_shadow
 			position: absolute
 			top: 0
@@ -913,10 +912,6 @@ footer
 							padding-left: 0
 	.foot_cont_item
 		width: 240px
-		&:nth-child(3)
-			width: 200px
-		&:nth-child(4)
-			width: 200px
 		span
 			display: block
 			font-weight: bold
@@ -965,7 +960,7 @@ footer
 	padding-top: 20px
 	padding-right: 50px
 	justify-content: space-between
-	flex-flow: row wrap
+	flex-flow: row nowrap
 	background: #f6f5f3
 	padding-bottom: 100px
 
@@ -3344,21 +3339,6 @@ button
 				width: 100%
 				display: block
 				
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

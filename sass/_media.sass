@@ -2,12 +2,23 @@
 
 /*==========  Desktop First Method  ==========*/
 
+@media only screen and (max-width : 1208px)
+	.sec_2_first:nth-child(3)
+		margin-top: 20px
+
+	.button_admin_reader_wrap
+		button
+			margin-bottom: 10px
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1032px)
 	header
 		.header_top
 			button
 				display: none
+	
+	.section_1 img
+		top: 0
 
 
 /* Medium Devices, Desktops */
@@ -28,8 +39,41 @@
 				button
 					display: flex
 
+
+
+
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 780px)
+
+	.section_1 img
+		width: auto
+		height: 100%
+
+	.sec_5_content_wrap
+		flex-flow: row wrap
+
+	.section_5 .sec_5_content
+		margin-top: 20px
+			
+	.section_5 .sec_5_content_wrap .sec_5_form_wrap, .section_5 .sec_5_content
+		width: 90%
+		margin-left: auto
+		margin-right: auto
+
+
+	.section_3
+		display: none
+
+	.section_2
+		background: white
+		.sec_2_item
+			background: #f2f2f2
+		.sec_2_first_top_item 
+			background-color: transparent
+
+	.foot_cont_item
+		&:nth-child(3), &:last-child
+			margin-top: 50px
 	
 	/*Disable Animation on Mobile Devices*/
 	.animated
@@ -54,8 +98,45 @@
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
+@media only screen and (max-width : 560px)
+	header .header_top .logo, header .header_bottom .contacts_header
+		margin-left: 10px
+
+	header .header_bottom .login_wrap
+		margin-right: 10px
+
+	footer .footer_bottom .foot_cop, .carts_foot
+		margin-left: auto
+		margin-right: auto
+
+	.section_1 .slider_wrap h1
+		width: auto
+		margin-left: 0
+		font-size: 36px
+
+	.section_1 .slider_wrap p
+		margin-left: 0
+
+	header .header_bottom .contacts_header p
+		margin-right: 0
+		&:last-child
+			margin-top: 0
+
+	.section_2 .sec_2_item img
+		display: none
+
+	.section_2
+		padding: 0 0
+		padding-bottom: 100px
+
+	footer .footer_bottom .foot_cop
+		text-align: center
+		margin-bottom: 20px
+
+	.section_2 .sec_2_first_top_item
+		padding: 0 10px
+
+
 
 
 /* Custom, iPhone Retina */
@@ -86,6 +167,20 @@
 
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
+@media only screen and (min-width : 1584px)
+	.section_2
+		.sec_2_item:nth-child(4)
+			margin-top: -53px
+
+	.sec_4_content_wrap
+		.sec_4_item, .last_item_4
+			flex: 1 1 275px
+		> div
+			&:not(:last-child)
+				margin-right: 10px
+			&:not(:first-child)
+				margin-left: 10px
+
+
+	
 
