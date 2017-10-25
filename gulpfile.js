@@ -30,13 +30,13 @@ gulp.task('react', () => {
 
 	appBundler.transform('babelify', {compact: true, presets: ['es2015', 'react', 'stage-0']})
 		.bundle().on('error',gutil.log)
-		.pipe(source('admin.js'))
+		.pipe(source('bundle.js'))
 		.pipe(gulp.dest('public/js'));
 });
 
 gulp.task('build-react', ['react'], () => {
-	return gulp.src('public/js/admin.js')
-		.pipe(concat('admin.min.js'))
+	return gulp.src('public/js/bundle.js')
+		.pipe(concat('bundle.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('public/js/'));
 })
@@ -72,4 +72,4 @@ gulp.task('watch', function () {
 	gulp.watch('public/*.html');
 });
 
-gulp.task('default', 'watch');
+gulp.task('default', ['watch']);
