@@ -21,7 +21,7 @@ export default class Header extends Component {
 							<li className="nav_ask"><a href=""><span></span><b className="targ_1">Ответы на частые вопросы</b></a></li>
 						</ul>
 					</nav>
-					<button className="yellow_button">Заполнить анкету</button>
+					<button onClick={(e) => this.props.popup(1)} className="yellow_button">Заполнить анкету</button>
 					<div className="small_mnu_wrap">
 						<button>
 							<span></span>
@@ -61,7 +61,7 @@ export default class Header extends Component {
 									<form action="">
 										<input type="text" placeholder="Логин" />
 										<div className="wrap_password clearfix"><input type="text" placeholder="Пароль" /><a href="">?</a></div>
-										<p>*для получения доступа нужно <a href="">заполнить анкету</a></p>
+										<p>*для получения доступа нужно <i onClick={(e) => this.props.popup(1)} className="link">заполнить анкету</i></p>
 									</form>
 								</div>
 								<button>Авторизоваться</button>
