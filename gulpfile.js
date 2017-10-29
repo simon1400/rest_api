@@ -65,7 +65,7 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('./public/js/'));
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', ['react'], function () {
 	gulp.watch('sass/*.sass', ['styles']);
 	gulp.watch('public/libs/**/*.js', ['scripts']);
 	gulp.watch('src/**/*jsx', ['react']);

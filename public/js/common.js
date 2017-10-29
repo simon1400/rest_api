@@ -14,7 +14,7 @@ $(function() {
 
 	function selects(param1, param2, param3){
 		$(param1).click(function() {
-			$(this).children().eq(2).slideToggle();
+			$(this).children().eq(3).slideToggle();
 			$(this).children().css('z-index', '1000');
 		})
 
@@ -22,6 +22,7 @@ $(function() {
 			$(this).siblings().removeClass(param3);
 			$(this).addClass(param3);
 			$(this).parent().parent().children().eq(0).html($(this).html());
+			$(this).parent().parent().children('input').attr('value', $(this).html());
 		})
 	}
 
@@ -33,8 +34,8 @@ $(function() {
 		$('.name_mnu').toggleClass('name_mnu_hover');
 	})
 
-	$('.login').click(function() {
-		$(this).toggleClass('login_hover');
+	$('.login p').click(function() {
+		$(this).parent().toggleClass('login_hover');
 	})
 
 	$('.popup > img').click(function() {
