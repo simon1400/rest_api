@@ -1,6 +1,7 @@
 @import "bourbon"
 @import "vars.sass"
 @import "fonts.sass"
+@import "../node_modules/react-select/scss/default.scss"
 
 
 //Load Libs SASS
@@ -29,6 +30,9 @@ body input:required:valid,
 body textarea:required:valid
 	color: #303030
 
+
+.Select-input > input
+	padding: 0!important
 
 header
 	background: #fff
@@ -2602,20 +2606,19 @@ input
 		padding-left: 10px
 		&:first-child
 			width: 65px
+			border-right: none
 		&:last-child
 			width: 65px
+			border-left: none
 	.select_month
 		width: 130px
 		font-size: 15px
-		border-top: 1px solid #ccc
-		border-bottom: 1px solid #ccc
 		float: left
 		height: 32px
-		padding-left: 15px
-		padding-right: 15px
-		padding-top: 3px
 		position: relative
 		cursor: pointer
+		input
+			border: none
 		i
 			position: absolute
 			right: 10px
@@ -2938,6 +2941,12 @@ button
 		.radio_sex_wrap
 			label
 				margin-top: 0
+
+
+.basic_select
+	max-height: 32px
+	.Select-control
+		border-radius: 0
 
 
 .link
