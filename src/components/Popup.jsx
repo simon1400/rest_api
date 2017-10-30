@@ -4,6 +4,7 @@ import { RadioGroup, Radio } from 'react-radio-group';
 import CountryData from '../staticData/country.js'
 import Month from '../staticData/month.js'
 import validation from '../validation.js'
+import axios from 'axios';
 
 
 export default class Popup extends React.Component {
@@ -12,6 +13,7 @@ export default class Popup extends React.Component {
     super(props);
 
     this.state = {
+    	id: '',
     	name: '',
     	surname: '',
     	day: '',
@@ -24,7 +26,7 @@ export default class Popup extends React.Component {
     	phone: ''
     }
 
-    this.submitForm = this.submitForm.bind(this);
+    this.singup = this.singup.bind(this);
     this.changeInfoPopup = this.changeInfoPopup.bind(this);
     this.selectChange = this.selectChange.bind(this);
     this.changeRadio = this.changeRadio.bind(this);
@@ -34,16 +36,32 @@ export default class Popup extends React.Component {
   	this.setState({ [name]: val.value })
 	}
 
+
   changeInfoPopup(e){
-  	this.setState({[e.target.name]: e.target.value})
+  	this.setState({[e.target.name]: e.target.value}) 	
   }
 
   changeRadio(val){
   	this.setState({ sex: val })
   }
 
-  submitForm(e) {
+  singup(e) {
+
+	  const createID = 'scz_' + Math.random().toString().slice(-8);
+  	this.setState({
+  		id: createID
+  	})
   	
+  	
+  	axios.post('/singup', {
+  		state: this.state,
+  		id: createID
+  	}).then((res) => {
+	  		this.props.changePopup(2);
+			}).catch((err) => {
+				console.log(err)
+			})
+
   	e.preventDefault()
   }
 
@@ -54,7 +72,7 @@ export default class Popup extends React.Component {
       	<div className={this.props.numPopup == 1 ? "anketa_popup popup" : "hidden"}>
 					<h3>ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ</h3>
 					<img onClick={(e) => this.props.changePopup(0)} src="img/close-big.png" alt="" />
-					<form onSubmit={(e) => this.submitForm(e)}>
+					<form onSubmit={(e) => this.singup(e)}>
 						<div className="anketa_wrap">
 							<div className="left_anketa">
 								<label htmlFor="">Имя:</label>

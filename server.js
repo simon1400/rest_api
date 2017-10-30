@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/public'));
 
 const dirname = __dirname;
 
-// app.use('/', require('./server/routes/home.js'));
+app.use('/', require('./server/routes/root.js'));
 app.use('/personal-area', require('./server/routes/personalArea.js'));
 
 app.listen(process.env.PORT || port, () => { 
