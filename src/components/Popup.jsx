@@ -1,4 +1,10 @@
 import React from 'react';
+import Select from 'react-select';
+import { RadioGroup, Radio } from 'react-radio-group';
+import CountryData from '../staticData/country.js'
+import Month from '../staticData/month.js'
+import validation from '../validation.js'
+
 
 export default class Popup extends React.Component {
 
@@ -9,10 +15,10 @@ export default class Popup extends React.Component {
     	name: '',
     	surname: '',
     	day: '',
-    	month: '',
+    	month: false,
     	year: '',
     	sex: '',
-    	country: '',
+    	country: false,
     	city: '',
     	email: '',
     	phone: ''
@@ -20,10 +26,20 @@ export default class Popup extends React.Component {
 
     this.submitForm = this.submitForm.bind(this);
     this.changeInfoPopup = this.changeInfoPopup.bind(this);
+    this.selectChange = this.selectChange.bind(this);
+    this.changeRadio = this.changeRadio.bind(this);
   }
+
+  selectChange(name, val) {
+  	this.setState({ [name]: val.value })
+	}
 
   changeInfoPopup(e){
   	this.setState({[e.target.name]: e.target.value})
+  }
+
+  changeRadio(val){
+  	this.setState({ sex: val })
   }
 
   submitForm(e) {
@@ -47,36 +63,38 @@ export default class Popup extends React.Component {
 								</div>
 								<label htmlFor="">Дата рождения:</label>
 								<div className="right_item_form">
-									<div className="select_date_wrap clearfix">
+
+								<div className="select_date_wrap clearfix">
 										<input type="text" name="day" placeholder="5" value={this.state.day} onChange={this.changeInfoPopup} />
 										<div className="select_month">
-											<span>Апрель</span>
-											<input className="hidden" value={this.state.month} name="month" onChange={this.changeInfoPopup} />
-											<i className="fa fa-angle-down" aria-hidden="true"></i>
-											<div className="content_select_date">
-												<span className="active_select_month">Сеньтябрь</span>
-												<span>Октябрь</span>
-												<span>Ноябрь</span>
-												<span>Декабрь</span>
-												<span>Декабрь</span>
-												<span>Декабрь</span>
-											</div>
+											
+											<Select
+											  name="month"
+											  value={this.state.month}
+											  placeholder="Выбрать"
+											  options={Month}
+											  clearable={false}
+											  onChange={this.selectChange.bind(this, 'month')}
+											/>
+
+
 										</div>
 										<input type="text" placeholder="1996" value={this.state.year} name="year" onChange={this.changeInfoPopup} />
-									</div>
+									</div>									
 								</div>
 								<label className="stranno" htmlFor="">Страна:</label>
-								<div className="standart_select">
-									<span>Не выбрано</span>
-									<input className="hidden" value={this.state.country} name="country" onChange={this.changeInfoPopup} />
-									<i className="fa fa-angle-down" aria-hidden="true"></i>
-									<div className="content_standart_select">
-										<span className="active_select_standart">Совободен</span>
-										<span>Женат</span>
-										<span>Не знаю</span>
-										<span>Есть любовница</span>
-									</div>
-								</div>
+
+
+								<Select
+								  name="country"
+								  value={this.state.country}
+								  options={CountryData}
+								  placeholder="Выбрать"
+								  clearable={false}
+								  onChange={this.selectChange.bind(this, 'country')}
+								/>
+
+
 								<label htmlFor="">E-mail:</label>
 								<div className="right_item_form">
 									<input type="text" palceholder="example@example.com" value={this.state.email} name="email" onChange={this.changeInfoPopup}/>
@@ -89,12 +107,16 @@ export default class Popup extends React.Component {
 									<input type="text" placeholder="Иванов" value={this.state.surname} name="surname" onChange={this.changeInfoPopup}/>
 								</div>
 								<label htmlFor="">Пол:</label>
-								<div className="radio_sex_wrap" onChange={this.changeInfoPopup}>
-									<input type="radio" name="sex" id="sex_1" defaultChecked />
+								
+								<RadioGroup className="radio_sex_wrap" selectedValue={this.state.sex} name="sex" onChange={this.changeRadio}>
+
+									<Radio value="man" id="sex_1" />
 									<label htmlFor="sex_1">Мужской</label>
-									<input type="radio" name="sex" id="sex_2" />
+									<Radio value="woman" id="sex_2" />
 									<label htmlFor="sex_2">Женский</label>
-								</div>
+									
+								</RadioGroup>
+
 								<label htmlFor="">Город:</label>
 								<div className="right_item_form">
 									<input type="text" placeholder="Москва" value={this.state.city} name="city" onChange={this.changeInfoPopup}/>
@@ -155,3 +177,11 @@ export default class Popup extends React.Component {
     );
   }
 }
+
+
+// <div className="radio_sex_wrap" onChange={this.changeInfoPopup}>
+// 									<input type="radio" name="sex" id="sex_1" defaultChecked />
+// 									<label htmlFor="sex_1">Мужской</label>
+// 									<input type="radio" name="sex" id="sex_2" />
+// 									<label htmlFor="sex_2">Женский</label>
+// 								</div>
