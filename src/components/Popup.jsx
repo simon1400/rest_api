@@ -156,7 +156,7 @@ export default class Popup extends React.Component {
 					</div>
 					<h3>Ваша заявка принята!</h3>
 					<p>Мы отправили Вам письмо с паролем на указанный почтовый ящик.</p>
-					<button>Продолжить</button>
+					<button onClick={(e) => {this.props.changePopup(0)}}>Продолжить</button>
 				</div>
 
 				<div className={this.props.numPopup == 3 ? "popup napisat_popup" : "hidden"}>

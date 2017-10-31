@@ -54,8 +54,8 @@ export default class Header extends Component {
 						<p><span></span>info@studyinczech.net</p>
 					</div>
 					<div className="login_wrap">
-						<div className="login">
-							<p><span></span>Войти</p>
+						<div className={this.props.authHover ? "login login_hover" : "login"}>
+							<p onClick={this.props.authHover ? this.props.disableAuth : this.props.enableAuth}><span></span>Войти</p>
 							<div className="authorization">
 								<div className="autho_content">
 									<form action="">
