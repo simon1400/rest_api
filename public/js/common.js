@@ -34,9 +34,9 @@ $(function() {
 		$('.name_mnu').toggleClass('name_mnu_hover');
 	})
 
-	$('.login p').click(function() {
-		$(this).parent().toggleClass('login_hover');
-	})
+	// $('.login p').click(function() {
+	// 	$(this).parent().toggleClass('login_hover');
+	// })
 
 	$('.popup > img').click(function() {
 		$(this).parent().hide();

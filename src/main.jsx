@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import Home from './containers/Home.jsx';
+import App from './containers/App.jsx';
 
 ReactDOM.render(
-	<Home />,
+	<App />,
 	document.getElementById('root')
 );
